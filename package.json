@@ -1,0 +1,20 @@
+{
+  "name": "politico-manual-react-scripts",
+  "version": "1.0.0",
+  "description": "custom webpack config for react politico",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tevin thuku",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tevinthuku/politico-react-manual-react-config.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Tevinthuku/politico-react-manual-react-config/issues"
+  },
+  "homepage": "https://github.com/Tevinthuku/politico-react-manual-react-config#readme"
+}
