@@ -1,0 +1,53 @@
+input,
+textarea {
+  border: 5px solid white;
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 0;
+  width: 95%;
+}
+
+select {
+  border: 5px solid white;
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 0;
+  width: 100%;
+}
+
+input[type="submit"] {
+  /* And that ain't all of them... */
+  width: 100%;
+  color: white;
+  background-color: #b4886b;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:disabled {
+  color: rgba(255, 255, 255, 0.596);
+  background-color: gray;
+}
+
+input[type="checkbox"] {
+  box-shadow: none;
+}
+
+label {
+  color: #b4886b;
+  font-weight: bold;
+  display: block;
+  width: 150px;
+  float: left;
+}
+label:after {
+  content: ": ";
+}
