@@ -25,7 +25,7 @@ select {
 
 input[type="submit"] {
   /* And that ain't all of them... */
-  width: 100%;
+  width: 95%;
   color: white;
   background-color: #b4886b;
   font-weight: 900;

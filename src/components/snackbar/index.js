@@ -22,7 +22,7 @@ const Snackbar = props => {
         return "success";
     }
   };
-  const { type, state, message } = props;
+  const { type, state, message, error } = props;
 
   return (
     <div>
@@ -39,7 +39,7 @@ const Snackbar = props => {
             <div className="flex-container">
               <div>
                 <p data-test="snack-message">
-                  <strong>{background()}:</strong> {message}
+                  <strong>{background()}:</strong> {message || error}
                 </p>
               </div>
               <div>
