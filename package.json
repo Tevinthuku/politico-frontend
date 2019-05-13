@@ -10,12 +10,17 @@
     "start": "serve -s dist",
     "heroku-postbuild": "yarn build",
     "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "format": "pretty-quick --staged",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "storybook": "start-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format && yarn lint && yarn test"
+      "pre-commit": "yarn format && yarn lint && yarn test",
+      "pre-push": "yarn deploy-storybook"
     }
   },
   "author": "tevin thuku",
@@ -36,6 +41,8 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^5.0.11",
+    "@storybook/storybook-deployer": "^2.8.1",
     "babel-eslint": "9.x",
     "babel-loader": "^8.0.5",
     "coveralls": "^3.0.3",
