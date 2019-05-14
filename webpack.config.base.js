@@ -5,7 +5,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "app.bundle.js"
+    filename: "app.bundle.js",
+    publicPath: "/"
   },
   module: {
     rules: [
@@ -18,6 +19,17 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
         exclude: /node_modules/
+      },
+      {
+        test: /\.(?:png|jpg|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "assets/[hash].[ext]"
+            }
+          }
+        ]
       }
     ]
   },

@@ -6,6 +6,8 @@ function loadStories() {
   require("../stories/components/layout");
   require("../stories/components/snackbar");
   require("../stories/components/input");
+  require("../stories/components/center");
+  require("../stories/components/rendersnackbars");
 }
 
 configure(loadStories, module);

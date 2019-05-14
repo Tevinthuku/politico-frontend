@@ -41,6 +41,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "@storybook/storybook-deployer": "^2.8.1",
     "babel-eslint": "9.x",
@@ -62,16 +63,23 @@
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0",
     "react-hot-loader": "^4.8.4",
+    "redux-devtools-extension": "^2.13.8",
     "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "serve": "^11.0.0"
   }
 }
