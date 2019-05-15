@@ -11,7 +11,4 @@ describe("isEmptyObject function tests", () => {
       })
     ).toBe(false);
   });
-  test("should return true if data other than object is passed", () => {
-    expect(isEmptyObject(23)).toBe(true);
-  });
 });

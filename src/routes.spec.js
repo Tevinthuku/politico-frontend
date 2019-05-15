@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Routes, { Home, Login, Listusers, Nomatch } from "./routes";
+import Routes, { Home, Login, Listusers, Nomatch, Listparties } from "./routes";
 import { Route } from "react-router-dom";
 
 let pathMap = {};
@@ -25,5 +25,9 @@ describe("routes using array of routers", () => {
 
   test("should render listofusers page for the /listusers route", () => {
     expect(pathMap["/listusers"]).toBe(Listusers);
+  });
+
+  test("should render listofparties page for the /listparties route", () => {
+    expect(pathMap["/listparties"]).toBe(Listparties);
   });
 });
