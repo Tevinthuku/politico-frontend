@@ -8,6 +8,7 @@ function loadStories() {
   require("../stories/components/input");
   require("../stories/components/center");
   require("../stories/components/rendersnackbars");
+  require("../stories/components/listitem");
 }
 
 configure(loadStories, module);
