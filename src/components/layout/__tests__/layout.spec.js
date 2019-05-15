@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { shallow } from "enzyme";
 
 import { findByTestAttr } from "../../../tests/testutils";
@@ -11,9 +11,9 @@ describe("<Layout />", () => {
     const wrapper = shallow(<Layout />);
     expect(
       wrapper.contains(
-        <a href="#home" data-test="anchor" className="active">
+        <Link data-test="anchor" to="/" className="active">
           Politico
-        </a>
+        </Link>
       )
     ).toBe(true);
   });
@@ -36,6 +36,6 @@ describe("<Layout />", () => {
 
   test("should render all anchor tags to the screen", () => {
     const wrapper = shallow(<Layout />);
-    expect(wrapper.find("a").some(`[data-test="anchor"]`)).toBe(true);
+    expect(wrapper.find(Link).some(`[data-test="anchor"]`)).toBe(true);
   });
 });

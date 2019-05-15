@@ -1,5 +1,11 @@
 import React from "react";
 
+import Center from "../../components/center";
+
 export default props => {
-  return <h1>Not found</h1>;
+  return (
+    <Center>
+      <h1>Page Not found</h1>
+    </Center>
+  );
 };

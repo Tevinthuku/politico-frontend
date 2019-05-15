@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./layout.css";
 import menu from "../../images/menu.svg";
 import close from "../../images/close.svg";
@@ -18,19 +19,19 @@ class Layout extends React.Component {
     return (
       <div>
         <div className={open ? `topnav responsive` : `topnav`} id="myTopnav">
-          <a data-test="anchor" href="#home" className="active">
+          <Link data-test="anchor" to="/" className="active">
             Politico
-          </a>
+          </Link>
           <div className="flex" />
-          <a data-test="anchor" href="#vote">
-            Vote
-          </a>
-          <a data-test="anchor" href="#login">
+          <Link data-test="anchor" to="/listusers">
+            Listusers
+          </Link>
+          <Link data-test="anchor" to="/listparties">
+            Listparties
+          </Link>
+          <Link data-test="anchor" to="/login">
             Login
-          </a>
-          <a data-test="anchor" href="#signup">
-            Signup
-          </a>
+          </Link>
           <a
             href="#menu"
             onClick={this.toggleOpen}
