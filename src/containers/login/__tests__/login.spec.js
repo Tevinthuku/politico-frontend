@@ -36,7 +36,7 @@ describe("<Login />", () => {
 
   test("should render submit button", () => {
     let submitbutton = findByTestAttr(wrapper, "submit");
-    expect(submitbutton.length).toBe(1);
+    expect(submitbutton.exists()).toBe(true);
   });
 });
 
