@@ -36,4 +36,12 @@ describe("<Snackbar />", () => {
       type: "error"
     });
   });
+
+  test("should not call handleClose prop if it wasnt passed on as a parameter", () => {
+    const handleClose = jest.fn();
+    const wrapper = shallow(<Snackbar state="open" type="error" />);
+    const closeicon = findByTestAttr(wrapper, "snack-close");
+    closeicon.simulate("click");
+    expect(handleClose).not.toBeCalled();
+  });
 });

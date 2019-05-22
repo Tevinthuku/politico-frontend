@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 describe("Login", () => {
   beforeEach(() => {
     cy.visit("/login");
@@ -45,6 +46,7 @@ describe("Login", () => {
     cy.get("[data-test=snack-message]").contains("User not found");
   });
   it("should redirect to home page if user logs in successfully", () => {
+    Cypress.LocalStorage.clear = function(keys, ls, rs) {};
     const response = {
       data: {
         message: "Logged in successfully",
@@ -77,6 +79,13 @@ describe("Login", () => {
       .should("have.value", typedPassword);
 
     cy.get("[data-test=submit]").click();
+    cy.window().then(window => {
+      expect(window.localStorage.getItem("__REDUX__STORE__")).to.eq(
+        JSON.stringify({
+          user: response
+        })
+      );
+    });
     cy.url().should("eq", "http://localhost:9000/");
   });
 });

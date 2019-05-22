@@ -28,14 +28,7 @@ const Snackbar = props => {
     <div>
       {state === "open" && (
         <div className="snack-wrap" data-test="snack-wrap">
-          <div
-            className={
-              `${background()} ` +
-              (state === "open"
-                ? `snackbar animated`
-                : `snackbar closesnackbar`)
-            }
-          >
+          <div className={`${background()} snackbar animated`}>
             <div className="flex-container">
               <div>
                 <p data-test="snack-message">
