@@ -22,3 +22,12 @@ export const login = (email, password, history) => {
       });
   };
 };
+
+export const logout = () => {
+  return dispatch => {
+    return dispatch({
+      type: actionTypes.SET_USER_DETAILS,
+      payload: {}
+    });
+  };
+};

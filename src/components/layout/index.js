@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { isEmptyObject } from "../../utils";
+import { logout } from "../../actions/auth";
+
 import "./layout.css";
 import menu from "../../images/menu.svg";
 import close from "../../images/close.svg";
 
-class Layout extends React.Component {
+export class UnconnectedLayout extends React.Component {
   state = {
     open: false
   };
@@ -16,6 +21,7 @@ class Layout extends React.Component {
   };
   render() {
     const { open } = this.state;
+    const { user, logout } = this.props;
     return (
       <div>
         <div className={open ? `topnav responsive` : `topnav`} id="myTopnav">
@@ -29,9 +35,15 @@ class Layout extends React.Component {
           <Link data-test="anchor" to="/listparties">
             Listparties
           </Link>
-          <Link data-test="anchor" to="/login">
-            Login
-          </Link>
+          {isEmptyObject(user) ? (
+            <Link data-test="anchor" to="/login">
+              Login
+            </Link>
+          ) : (
+            <a href="#" data-test="anchor-logout" onClick={logout}>
+              Logout
+            </a>
+          )}
           <a
             href="#menu"
             onClick={this.toggleOpen}
@@ -52,4 +64,13 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout;
+const mapStateToProps = state => {
+  const { user } = state;
+
+  return { user };
+};
+
+export default connect(
+  mapStateToProps,
+  { logout }
+)(UnconnectedLayout);

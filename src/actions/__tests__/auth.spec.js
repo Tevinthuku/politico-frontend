@@ -2,7 +2,7 @@ import { storeFactory } from "../../tests/testutils";
 
 import axios from "axios";
 
-import { login } from "../auth";
+import { login, logout } from "../auth";
 
 jest.spyOn(axios, "post");
 
@@ -63,4 +63,31 @@ test("should store error in errros array after unsuccessfull login", () => {
         }
       ]);
     });
+});
+
+test("should return empty object as value in user key on calling logout", () => {
+  let history = {
+    push: jest.fn()
+  };
+  let newState;
+  axios.post.mockResolvedValue({
+    status: 200,
+    data: {
+      token: "kjdkewjriw32435324dwes",
+      user: data
+    }
+  });
+  const store = storeFactory();
+
+  store.dispatch(login("tev@gmail.com", "pass123", history)).then(() => {
+    newState = store.getState();
+    expect(newState.user).toEqual({
+      token: "kjdkewjriw32435324dwes",
+      user: data
+    });
+  });
+
+  store.dispatch(logout());
+  newState = store.getState();
+  expect(newState.user).toEqual({});
 });

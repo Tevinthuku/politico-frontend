@@ -7458,6 +7458,13 @@ loader-utils@^0.2.11, loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
+localstorage-redux@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/localstorage-redux/-/localstorage-redux-0.2.1.tgz#da69139c37e506ac314edc95c30e6f4813c1a46b"
+  integrity sha512-7YQqqkatcmlxSFKTnrWj664H/Pei2foiyumWKXJTjLrDfUkIikhLE1YhD560aqojdU9dMKnR4zb0A9YmjSMSRg==
+  dependencies:
+    lodash.throttle "^4.1.1"
+
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
